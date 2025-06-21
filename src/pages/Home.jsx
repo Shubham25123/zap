@@ -10,19 +10,22 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const location = useLocation();
 
+  const API_URL = import.meta.env.VITE_API_URL;
+  const CATEGORY_API = import.meta.env.VITE_CATEGORY_API;
+
   const searchParams = new URLSearchParams(location.search);
   const search = searchParams.get('search');
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
+    axios.get(API_URL)
       .then(res => {
         setProducts(res.data);
         setFiltered(res.data);
       });
 
-    axios.get('https://fakestoreapi.com/products/categories')
+    axios.get(CATEGORY_API)
       .then(res => setCategories(res.data));
-  }, []);
+  }, [API_URL, CATEGORY_API]);
 
   useEffect(() => {
     let result = [...products];
@@ -42,7 +45,6 @@ const Home = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen px-6 md:px-10 lg:px-20 py-8">
-      
       {/* Quote Section */}
       <div className="bg-blue-100 text-center p-6 rounded shadow mb-10">
         <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 italic">
