@@ -1,12 +1,97 @@
-# React + Vite
+# 🛍️ Zap E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and minimalist e-commerce web app built using **React**, **Vite**, and **Tailwind CSS**. Integrated with the fakestoreapi API to showcase real product listings.
 
-Currently, two official plugins are available:
+## 📦 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🛒 Product listing with API integration (fakestoreapi)
+- 🔍 Category-based product filtering
+- 💡 Light/Dark mode toggle
+- 🎯 Interactive product cards with hover and cursor effects
+- 📱 Responsive design for all screen sizes
+- 🧠 Cart context for managing product state
+- 📃 Inspiring e-commerce quote on homepage
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React.js
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🌐 fakestoreapi API
+
+## 📁 Folder Structure
+
+```bash
+zap/
+├── public/                         # Static assets
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx             
+│   │   └── ProductCard.jsx        # Product display cards
+│   ├── pages/
+│   │   ├── Home.jsx               # Homepage with product quote and filters
+│   │   └── Login.jsx              # Login form (optional)
+│   ├── context/
+│   │   └── CartContext.jsx        # Cart state management using Context API
+│   ├── App.jsx                    # App component with routing
+│   ├── main.jsx                   # App entry point
+│   ├── index.css                  # Tailwind CSS setup
+│   └── App.css                    # Custom styles
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🖼️ Preview
+
+> (Add screenshots or deployment link here)
+
+## 📦 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Shubham25123/zap.git
+cd zap
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Project
+
+```bash
+npm run dev
+```
+
+## 🔑 Environment Variables (if any)
+
+If you're using `.env` variables (e.g., for base API URL):
+
+```env
+VITE_API_URL=https://fakestoreapi.com/products
+VITE_CATEGORY_API=https://fakestoreapi.com/products/categories
+```
+
+## 🌐 API Used
+
+- 📡 [fakestoreapi](https://fakestoreapi.com/products) – Free fake product API for testing and prototyping.
+- 📡 [fakestoreapi](https://fakestoreapi.com/products/categories) – Free fake product API for testing and prototyping.
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+Feel free to fork the repository and submit a pull request.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> Built by [Shubham Sharma](https://github.com/Shubham25123)
